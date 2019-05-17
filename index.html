@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
 
-    <title>Belajar image slideshow</title>
+    <title>Final Project</title>
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css?family=Stylish" rel="stylesheet">
     <script src="index.js"></script>
@@ -13,22 +13,62 @@
 
 
 <body>
+    <div>
+        <h1>
+            <center>Find Your Suitable Internet Package Plan</center>
+        </h1>
+        <h2> Fill the data field below!</h2>
 
-    <h1>Your Recommended Internet Package Plan</h1>
-    <h2> Fill the questionnaire below!</h2>
+        <fieldset>
+            <legend><b>Your Identity</b></legend>
 
-    <form action="/identity" method="post">
-        <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="user_name">
-        </div>
-        <div>
-            <label for="job">Occupation:</label>
-            <input type="job" id="job" name="job">
-        </div>
+            <table>
+                <tr>
+                    <td> Name
+                        <td><input id="Name" type="text"></td>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Age (years old)
+                        <td><input id="Age" type="text"></td>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend><b>Your Digital Activities</b></legend>
 
-    </form>
+            <label for="wifi">1. How many hours a day you use Wi-Fi instead of mobile data?</label>
+            <form action="/wifi.php">
+                <select name="wifi">
+                <option value="none1">Do not use WiFi</option>
+                <option value="wifi1">6-12 hours a day</option>
+                <option value="wifi2">all days</option>
+                </select>
+            </form>
+            <label for="streaming">2. How many hours a week you use mobile data for video streaming?</label>
+            <form action="/streaming.php">
+                <select name="streaming">
+                <option value="none2">Never use mobile data for streaming</option>
+                <option value="streaming1">1-4 hours a week</option>
+                <option value="streaming2">5-12 hours a week</option>
+                </select>
+            </form>
+            <label for="budget">3. How much budget you allocate for monthly mobile data plan?</label>
+            <form action="/budget.php">
+                <select name="budget">
+                <option value="budget1">Rp 50.000 - Rp 100.000 </option>
+                <option value="budget2">Rp 100.000 - Rp 200.000</option>
+                <option value="budget3">more than Rp 200.000</option>
+                </select>
+            </form>
 
+        </fieldset>
+
+
+    </div>
+    <input type="submit" value="SUBMIT">
 </body>
 
 </html>

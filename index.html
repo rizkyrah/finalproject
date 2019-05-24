@@ -25,7 +25,7 @@
             <table>
                 <tr>
                     <td> Name
-                        <td><input id="Name" type="text"></td>
+                        <td><input id="name" type="text"></td>
                     </td>
                 </tr>
                 <tr>
@@ -41,26 +41,34 @@
 
             <label for="wifi">1. How many hours a day you use Wi-Fi instead of mobile data?</label>
             <form action="/wifi.php">
-                <select name="wifi">
-                <option value="none1">Do not use WiFi</option>
-                <option value="wifi1">6-12 hours a day</option>
-                <option value="wifi2">all days</option>
+                <select id="wifi">
+                <option value="a">Do not use WiFi</option>
+                <option value="b">6-12 hours a day</option>
+                <option value="c">all days</option>
                 </select>
             </form>
             <label for="streaming">2. How many hours a week you use mobile data for video streaming?</label>
             <form action="/streaming.php">
-                <select name="streaming">
-                <option value="none2">Never use mobile data for streaming</option>
-                <option value="streaming1">1-4 hours a week</option>
-                <option value="streaming2">5-12 hours a week</option>
+                <select id="streaming">
+                <option value="a">Never use mobile data for streaming</option>
+                <option value="b">1-4 hours a week</option>
+                <option value="c">5-12 hours a week</option>
                 </select>
             </form>
-            <label for="budget">3. How much budget you allocate for monthly mobile data plan?</label>
+            <label for="socmed">3. How many hours a day you use mobile data for social media (e.g. instagram, facebook)?</label>
             <form action="/budget.php">
-                <select name="budget">
-                <option value="budget1">Rp 50.000 - Rp 100.000 </option>
-                <option value="budget2">Rp 100.000 - Rp 200.000</option>
-                <option value="budget3">more than Rp 200.000</option>
+                <select id="socmed">
+                <option value="a"> 30 minutes - 1 hour </option>
+                <option value="b"> 1 - 3 hours </option>
+                <option value="c"> more than 3 hours </option>
+                </select>
+            </form>
+            <label for="budget">4. How much budget you allocate for monthly mobile data plan?</label>
+            <form action="/budget.php">
+                <select id="budget">
+                <option value="a">Rp 50.000 - Rp 100.000 </option>
+                <option value="b">Rp 100.000 - Rp 200.000</option>
+                <option value="c">more than Rp 200.000</option>
                 </select>
             </form>
 
@@ -68,7 +76,32 @@
 
 
     </div>
-    <input type="submit" value="SUBMIT">
+
+    <button onclick="test()">submit</button>
+    <p id="demo"></p>
+
+    <div>
+        Hi <span id="InsertName"></span>! Your Suitbale Package is....
+    </div>
+    <div class="paket">
+        <div class="showImage">
+
+            <div id="basic" style="display:none">
+                <img src="basic.JPG" style="width:25%">
+            </div>
+
+            <div id="medium" style="display:none">
+                <img src="medium.JPG" style="width:25%">
+            </div>
+
+            <div id="premium" style="display:none">
+                <img src="premium.JPG" style="width:25%">
+            </div>
+
+        </div>
+    </div>
+
+
 </body>
 
 </html>

@@ -16,21 +16,20 @@ function test() {
     switch (submit) {
 
         case "aaaa":
-        case "aaab":
-        case "aabb":
-        case "abbb":
+        case "abba":
             option = "basic";
             break;
         case "bbbb":
         case "bbaa":
         case "bbba":
-        case "bbcc":
+        case "bbca":
+        case "bbcb":
             option = "medium";
             break;
         case "cccc":
-        case "ccca":
-        case "ccab":
-        case "cabb":
+        case "cbcc":
+        case "bbcc":
+        case "ccbc":
             option = "premium";
             break;
     }
